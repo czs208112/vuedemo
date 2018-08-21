@@ -26,5 +26,13 @@ new Vue({
     return {
       message: 'hello vue'
     }
+  },
+  mounted () {
+    this.axios.get(process.env.API_BASEURL + '/api/test', {
+      params: {
+        name: 'zhagnsan',
+        age: 18
+      }
+    })
   }
 })
